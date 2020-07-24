@@ -31,14 +31,14 @@ class TestEvacuateDeleteServerRestartOriginalCompute(
         self.flavor1 = flavors[0]
 
     # NOTE(mriedem): This is here for backports and should be removed later
-    # on master (Stein).
+    # on main (Stein).
     def assertFlavorMatchesAllocation(self, flavor, allocation):
         self.assertEqual(flavor['vcpus'], allocation['VCPU'])
         self.assertEqual(flavor['ram'], allocation['MEMORY_MB'])
         self.assertEqual(flavor['disk'], allocation['DISK_GB'])
 
     # NOTE(mriedem): This is here for backports and should be removed later
-    # on master (Stein).
+    # on main (Stein).
     def _boot_and_check_allocations(self, flavor, source_hostname):
         """Boot an instance and check that the resource allocation is correct
         After booting an instance on the given host with a given flavor it
